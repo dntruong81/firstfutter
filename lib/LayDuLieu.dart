@@ -21,7 +21,7 @@ class FirstAppHomePage extends StatefulWidget {
 }
 
 class FirstAppHomePageState extends State<FirstAppHomePage> {
-  int bienDem = 0;
+  String gtNhapVao = '';
 
   @override
   Widget build(BuildContext context) {
@@ -33,17 +33,22 @@ class FirstAppHomePageState extends State<FirstAppHomePage> {
       ),
       body: Center(
           child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text('So lan ban da nhan vao nut:'),
-          Text('so lan: $bienDem')
-        ],
-      )),
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox( width: 200,
+                child: TextField(
+                    onChanged: (text){
+                      gtNhapVao = text;
+                      },
+                    decoration: InputDecoration(border: OutlineInputBorder())),),
+              SizedBox(height: 10),
+              Text('Ban da nhap vao: $gtNhapVao')
+            ],
+          )),
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.plus_one),
           onPressed: () {
-            bienDem++;
-            setState(() {});
+          setState(() {});
           }),
     ));
   }
