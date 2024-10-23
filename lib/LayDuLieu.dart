@@ -42,7 +42,7 @@ class FirstAppHomePageState extends State<FirstAppHomePage> {
                       },
                     decoration: InputDecoration(border: OutlineInputBorder())),),
               SizedBox(height: 10),
-              Text('Chuoc Ban da nhap vao: $gtNhapVao')
+              Text('Chuoc Ban da nhap vao la: $gtNhapVao')
             ],
           )),
       floatingActionButton: FloatingActionButton(
